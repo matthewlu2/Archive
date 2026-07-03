@@ -15,16 +15,76 @@
 		788F3B7C2FF8675E008079F9 /* Realtime in Frameworks */ = {isa = PBXBuildFile; productRef = 788F3B7B2FF8675E008079F9 /* Realtime */; };
 		788F3B7E2FF8675E008079F9 /* Storage in Frameworks */ = {isa = PBXBuildFile; productRef = 788F3B7D2FF8675E008079F9 /* Storage */; };
 		788F3B802FF8675E008079F9 /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = 788F3B7F2FF8675E008079F9 /* Supabase */; };
+		AA000000000000000000000C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = AA000000000000000000000B /* Supabase */; };
+		AA000000000000000000000E /* ArchiveShareExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = AA0000000000000000000003 /* ArchiveShareExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA000000000000000000000F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 788F3B3D2FF86701008079F9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA0000000000000000000004;
+			remoteInfo = ArchiveShareExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AA000000000000000000000D /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				AA000000000000000000000E /* ArchiveShareExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		788F3B452FF86701008079F9 /* Archive.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Archive.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA0000000000000000000003 /* ArchiveShareExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ArchiveShareExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		787912F62FF8756F0086929E /* Exceptions for "Archive" folder in "Archive" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 788F3B442FF86701008079F9 /* Archive */;
+		};
+		AA0000000000000000000011 /* Exceptions for "ArchiveShareExtension" folder in "ArchiveShareExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = AA0000000000000000000004 /* ArchiveShareExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		788F3B472FF86701008079F9 /* Archive */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				787912F62FF8756F0086929E /* Exceptions for "Archive" folder in "Archive" target */,
+			);
 			path = Archive;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000001 /* Shared */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		AA0000000000000000000002 /* ArchiveShareExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				AA0000000000000000000011 /* Exceptions for "ArchiveShareExtension" folder in "ArchiveShareExtension" target */,
+			);
+			path = ArchiveShareExtension;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,6 +105,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA0000000000000000000006 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA000000000000000000000C /* Supabase in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -52,6 +120,8 @@
 			isa = PBXGroup;
 			children = (
 				788F3B472FF86701008079F9 /* Archive */,
+				AA0000000000000000000001 /* Shared */,
+				AA0000000000000000000002 /* ArchiveShareExtension */,
 				788F3B462FF86701008079F9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -60,6 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				788F3B452FF86701008079F9 /* Archive.app */,
+				AA0000000000000000000003 /* ArchiveShareExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,13 +145,16 @@
 				788F3B412FF86701008079F9 /* Sources */,
 				788F3B422FF86701008079F9 /* Frameworks */,
 				788F3B432FF86701008079F9 /* Resources */,
+				AA000000000000000000000D /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				AA0000000000000000000010 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				788F3B472FF86701008079F9 /* Archive */,
+				AA0000000000000000000001 /* Shared */,
 			);
 			name = Archive;
 			packageProductDependencies = (
@@ -97,6 +171,30 @@
 			productReference = 788F3B452FF86701008079F9 /* Archive.app */;
 			productType = "com.apple.product-type.application";
 		};
+		AA0000000000000000000004 /* ArchiveShareExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA0000000000000000000008 /* Build configuration list for PBXNativeTarget "ArchiveShareExtension" */;
+			buildPhases = (
+				AA0000000000000000000005 /* Sources */,
+				AA0000000000000000000006 /* Frameworks */,
+				AA0000000000000000000007 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				AA0000000000000000000001 /* Shared */,
+				AA0000000000000000000002 /* ArchiveShareExtension */,
+			);
+			name = ArchiveShareExtension;
+			packageProductDependencies = (
+				AA000000000000000000000B /* Supabase */,
+			);
+			productName = ArchiveShareExtension;
+			productReference = AA0000000000000000000003 /* ArchiveShareExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -108,6 +206,9 @@
 				LastUpgradeCheck = 2620;
 				TargetAttributes = {
 					788F3B442FF86701008079F9 = {
+						CreatedOnToolsVersion = 26.2;
+					};
+					AA0000000000000000000004 = {
 						CreatedOnToolsVersion = 26.2;
 					};
 				};
@@ -131,12 +232,20 @@
 			projectRoot = "";
 			targets = (
 				788F3B442FF86701008079F9 /* Archive */,
+				AA0000000000000000000004 /* ArchiveShareExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		788F3B432FF86701008079F9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA0000000000000000000007 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -153,7 +262,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AA0000000000000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA0000000000000000000010 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA0000000000000000000004 /* ArchiveShareExtension */;
+			targetProxy = AA000000000000000000000F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		788F3B642FF86702008079F9 /* Debug */ = {
@@ -280,10 +404,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Archive/Archive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GUR7SKHXU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Archive/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -311,10 +438,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Archive/Archive.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GUR7SKHXU;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Archive/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -327,6 +457,64 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = matthewlu.Archive;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA0000000000000000000009 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ArchiveShareExtension/ArchiveShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GUR7SKHXU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchiveShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Archive;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matthewlu.Archive.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA000000000000000000000A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = ArchiveShareExtension/ArchiveShareExtension.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8GUR7SKHXU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ArchiveShareExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Archive;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = matthewlu.Archive.ShareExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_DEFAULT_ACTOR_ISOLATION = MainActor;
@@ -354,6 +542,15 @@
 			buildConfigurations = (
 				788F3B672FF86702008079F9 /* Debug */,
 				788F3B682FF86702008079F9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA0000000000000000000008 /* Build configuration list for PBXNativeTarget "ArchiveShareExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA0000000000000000000009 /* Debug */,
+				AA000000000000000000000A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -416,6 +613,11 @@
 			productName = Storage;
 		};
 		788F3B7F2FF8675E008079F9 /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 788F3B742FF8675E008079F9 /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+		AA000000000000000000000B /* Supabase */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 788F3B742FF8675E008079F9 /* XCRemoteSwiftPackageReference "supabase-swift" */;
 			productName = Supabase;
